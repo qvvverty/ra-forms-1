@@ -1,0 +1,29 @@
+.form-container {
+  position: absolute;
+  z-index: 2;
+  top: calc(50% - 41px);
+  left: calc(50% - 100px);
+}
+
+.input:first-child {
+  margin-bottom: 10px;
+}
+
+.input {
+  display: block;
+
+  width: 200px;
+  height: 30px;
+
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 18px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.background {
+  position: absolute;
+  z-index: 1;
+  width: 100vw;
+  height: 100vh;
+}
