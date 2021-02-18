@@ -14,17 +14,17 @@ export default function ColorConverter() {
       return rgbString += parseInt(input.substring(5, 7), 16) + ')';
   }
 
-  const onInput = (inputEvent) => {
+  const onInputChange = (inputEvent) => {
     const input = inputEvent.target.value;
     if (input.length === 7) {
-      /#[\d|aA-fF]{6}$/.test(input) ? setRgb(getRgbString(input)) : setRgb('Ошибка!');
+      /#[\d|a-f|A-F]{6}$/.test(input) ? setRgb(getRgbString(input)) : setRgb('Ошибка!');
     }
   }
 
   return (
     <>
       <div className="form-container">
-        <InputHex onInput={onInput} />
+        <InputHex onInputChange={onInputChange} />
         <OutputRgb rgb={rgb} />
       </div>
       <ColorDisplay color={rgb} />

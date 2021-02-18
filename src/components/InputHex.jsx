@@ -1,3 +1,3 @@
-export default function InputHex({ onInput }) {
-  return <input onInput={onInput} className="input" type="text" name="hex" placeholder="HEX" />
+export default function InputHex({ onInputChange }) {
+  return <input onChange={onInputChange} className="input" type="text" name="hex" placeholder="HEX" />
 }
